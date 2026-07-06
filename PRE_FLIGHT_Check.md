@@ -2,6 +2,32 @@
 
 Rolling pre-flight review log for KeyGen.
 
+## KG-2026-07-06-0008 - Version Label Format
+
+Date: 2026-07-06
+Timestamp: 2026-07-06 02:24 America/Los_Angeles
+Branch: main
+Scope: Visible dev build label syntax update.
+
+### Review
+
+The active served bundle, source constant, and Fourthwall tester snippet were reviewed before the label update.
+
+### Findings
+
+- The visible build label was readable but the compact date segment was not ideal.
+- The current diagnostic build should keep the same semantic version identity while making the date easier to parse.
+- This update changes labels and cache-busting text only.
+- No backup is required.
+
+### Recommendation
+
+Use `KG-YYYY-MM-DD-xxxx-label` for visible dev build labels.
+
+### Action Taken
+
+Updated the active bundle, source constant, tester snippet, history record, and diff record to use `KG-2026-07-06-0006-debug`.
+
 ## KG-20260706-0006 - Embed Diagnostics
 
 Date: 2026-07-06
