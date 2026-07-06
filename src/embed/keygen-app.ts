@@ -1,9 +1,10 @@
+import { generateCalibrationKeycapStl } from '../core/keycap/calibration';
 import { DEFAULT_KEYCAP_SPEC } from '../core/keycap/defaults';
 import type { KeycapSpec } from '../core/keycap/types';
 import { validateKeycapSpec } from '../core/keycap/validation';
 import { KEYGEN_STYLES } from './styles';
 
-const APP_VERSION = 'KG-2026-07-06-0006-debug';
+const APP_VERSION = 'KG-2026-07-06-0009-calibration';
 const STYLE_ID = 'kwkg-styles';
 const ROOT_SELECTOR = '#keygen-app';
 
@@ -72,21 +73,27 @@ function updatePreview(root: HTMLElement): void {
     const currentIssues = validateKeycapSpec(spec);
     issues.textContent = currentIssues.length
       ? currentIssues.map((issue) => issue.message).join(' ')
-      : 'Prototype check: no blocking validation issues.';
+      : 'Calibration STL export is active. Print this rough cap first to check basic scale and switch fit.';
   }
+}
+
+function downloadTextFile(filename: string, contents: string, type: string): void {
+  const blob = new Blob([contents], { type });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = filename;
+  link.click();
+  URL.revokeObjectURL(url);
 }
 
 function downloadSpec(root: HTMLElement): void {
   const spec = readSpec(root);
-  const blob = new Blob([JSON.stringify({ version: APP_VERSION, spec }, null, 2)], {
-    type: 'application/json'
-  });
-  const url = URL.createObjectURL(blob);
-  const link = document.createElement('a');
-  link.href = url;
-  link.download = 'keygen-dev-spec.json';
-  link.click();
-  URL.revokeObjectURL(url);
+  downloadTextFile('keygen-dev-spec.json', JSON.stringify({ version: APP_VERSION, spec }, null, 2), 'application/json');
+}
+
+function downloadCalibrationStl(): void {
+  downloadTextFile('keygen-redragon-k580-1u-calibration.stl', generateCalibrationKeycapStl(), 'model/stl');
 }
 
 function render(root: HTMLElement): void {
@@ -98,7 +105,7 @@ function render(root: HTMLElement): void {
       <div>
         <p class="kwkg-kicker">Knight Witch / KeyGen Prototype</p>
         <h1 class="kwkg-title">Dual-Legend Keycap Generator</h1>
-        <p class="kwkg-subtitle">Direct embed test shell for a Redragon K580RGB 1u FDM keycap. Geometry export is intentionally disabled until the generator core is added.</p>
+        <p class="kwkg-subtitle">Direct embed test shell for a Redragon K580RGB 1u FDM keycap. This build enables the first rough calibration STL for physical fit testing.</p>
       </div>
       <p class="kwkg-meta">${APP_VERSION}</p>
     </header>
@@ -121,8 +128,8 @@ function render(root: HTMLElement): void {
         <p class="kwkg-meta">Target: ${spec.keyboardTarget} / ${spec.keySize} / ${spec.nozzleMm} mm FDM</p>
         <p class="kwkg-issues" data-kwkg-issues></p>
         <div class="kwkg-button-row">
+          <button class="kwkg-button" type="button" data-kwkg-action="download-calibration-stl">Download calibration STL</button>
           <button class="kwkg-button" type="button" data-kwkg-action="download-spec">Download dev spec JSON</button>
-          <button class="kwkg-button" type="button" disabled>STL export pending geometry core</button>
           <button class="kwkg-button" type="button" disabled>3MF export pending geometry core</button>
         </div>
       </aside>
@@ -147,6 +154,10 @@ export function mount(target?: string | HTMLElement): void {
 
   root.querySelector<HTMLButtonElement>('[data-kwkg-action="download-spec"]')?.addEventListener('click', () => {
     downloadSpec(root);
+  });
+
+  root.querySelector<HTMLButtonElement>('[data-kwkg-action="download-calibration-stl"]')?.addEventListener('click', () => {
+    downloadCalibrationStl();
   });
 }
 
