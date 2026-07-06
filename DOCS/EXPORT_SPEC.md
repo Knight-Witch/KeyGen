@@ -1,7 +1,7 @@
 # Export Spec
 
 Update ID: KG-20260706-0001
-Last Updated: 2026-07-06 00:23 America/Los_Angeles
+Last Updated: 2026-07-06 00:38 America/Los_Angeles
 Owner: Amanda Ivans / Knight Witch
 
 ## Purpose
@@ -38,6 +38,26 @@ keygen_export_<design-id>/
 ```
 
 All STLs must use the same coordinate origin and import aligned.
+
+## Blender / Dev Inspection Export
+
+For development, KeyGen should support an inspection export that is easy to import into Blender.
+
+Preferred dev inspection formats:
+
+- GLB or glTF for multi-object scene inspection with material separation.
+- OBJ as a fallback when simple mesh inspection is enough.
+- STL for slicer-parity inspection.
+
+The Blender inspection export should preserve:
+
+- Separate object names.
+- Shared origin.
+- Material-role naming.
+- Scale in millimeters where possible.
+- Shell, diffuser/stem/secondary legend, and primary legend as separate selectable objects.
+
+This export is not necessarily the final manufacturing format. It exists so geometry can be visually inspected, annotated, edited, or mocked up in Blender during development.
 
 ## Object Naming
 
