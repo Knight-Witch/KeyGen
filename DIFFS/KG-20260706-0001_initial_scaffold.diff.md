@@ -23,8 +23,8 @@ Initial repository documentation and project tracking scaffold for KeyGen.
 + DOCS/LANGUAGE_TEXT_SPEC.md
 + DOCS/PRINTING_SPEC.md
 + DIFFS/KG-20260706-0001_initial_scaffold.diff.md
-+ ASSETS/.gitkeep
-+ BACKUP_VAULT/.gitkeep
++ ASSETS/README.md
++ BACKUP_VAULT/README.md
 ```
 
 ## Files Updated
