@@ -1,22 +1,27 @@
 # Fourthwall Tester Snippet
 
-Update ID: KG-20260706-0005
-Last Updated: 2026-07-06 01:28 America/Los_Angeles
+Update ID: KG-20260706-0006
+Last Updated: 2026-07-06 02:05 America/Los_Angeles
 Owner: Amanda Ivans / Knight Witch
 
 ## Purpose
 
 This is the small snippet intended for the unlisted Fourthwall tester page.
 
-## Main-Branch Test Snippet
+## Diagnostic Test Snippet
 
 Use this while actively testing the prototype:
 
 ```html
-<div id="keygen-app" data-keygen-mode="dev"></div>
+<div
+  id="keygen-app"
+  data-keygen-mode="dev"
+  style="box-sizing:border-box;min-height:180px;padding:18px;border:1px solid rgba(255,255,255,.22);border-radius:12px;background:#120f18;color:#f4f0ff;font-family:system-ui,sans-serif;">
+  KeyGen loading... If this message stays here, the external script did not execute.
+</div>
 <script
   defer
-  src="https://cdn.jsdelivr.net/gh/Knight-Witch/KeyGen@main/dist/keygen-app.js?v=KG-20260706-0005-dev">
+  src="https://cdn.jsdelivr.net/gh/Knight-Witch/KeyGen@main/dist/keygen-app.js?v=KG-20260706-0006-debug">
 </script>
 ```
 
@@ -25,12 +30,24 @@ Use this while actively testing the prototype:
 Use a commit-pinned URL when a specific tested build should not change unexpectedly:
 
 ```html
-<div id="keygen-app" data-keygen-mode="dev"></div>
+<div
+  id="keygen-app"
+  data-keygen-mode="dev"
+  style="box-sizing:border-box;min-height:180px;padding:18px;border:1px solid rgba(255,255,255,.22);border-radius:12px;background:#120f18;color:#f4f0ff;font-family:system-ui,sans-serif;">
+  KeyGen loading... If this message stays here, the external script did not execute.
+</div>
 <script
   defer
-  src="https://cdn.jsdelivr.net/gh/Knight-Witch/KeyGen@COMMIT_SHA/dist/keygen-app.js?v=VERSION_LABEL">
+  src="https://cdn.jsdelivr.net/gh/Knight-Witch/KeyGen@COMMIT_SHA/dist/keygen-app.js?v=KG-20260706-0006-debug">
 </script>
 ```
+
+## Expected Outcomes
+
+- If the full KeyGen UI appears, the script loaded and mounted correctly.
+- If only the loading message appears, Fourthwall rendered the container but did not execute or could not load the external script.
+- If a red KeyGen error box appears, the script executed but could not mount correctly.
+- If nothing appears at all, the Fourthwall block itself is not rendering the HTML snippet.
 
 ## Notes
 
