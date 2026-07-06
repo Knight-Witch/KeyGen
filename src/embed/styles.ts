@@ -138,6 +138,16 @@ export const KEYGEN_STYLES = `
   font-size: 13px;
 }
 
+.kwkg-debug {
+  margin: 14px 0 0;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #d9d1ee;
+  font-size: 12px;
+  word-break: break-word;
+}
+
 @media (max-width: 760px) {
   .kwkg-grid {
     grid-template-columns: 1fr;
