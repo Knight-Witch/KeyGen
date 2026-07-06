@@ -2,8 +2,8 @@
 
 Project source bible for KeyGen. This file tracks product decisions, status, roadmap items, and removals.
 
-Update ID: KG-20260706-0002
-Last Updated: 2026-07-06 00:38 America/Los_Angeles
+Update ID: KG-20260706-0003
+Last Updated: 2026-07-06 00:50 America/Los_Angeles
 Owner: Amanda Ivans / Knight Witch
 
 ## Project Definition
@@ -35,6 +35,8 @@ Users should be able to choose a keycap target, configure primary and secondary 
 - Preferred export: pre-aligned 3MF.
 - Compatibility export: grouped STLs.
 - Dev inspection export: Blender-friendly GLB/glTF or OBJ where useful.
+- Primary testing workflow: hosted dev/staging page.
+- Local development workflow: fallback/developer-only path, not Amanda's required test path.
 
 ## Approved MVP Geometry Model
 
@@ -72,9 +74,11 @@ Status: In progress.
 - [x] Add local dev setup documentation.
 - [x] Add UI viewport specification.
 - [x] Add Blender/dev inspection export requirement.
+- [x] Define hosted dev page as primary testing workflow.
 - [ ] Create app scaffold.
 - [ ] Define package manager and scripts.
 - [ ] Add linting/formatting rules.
+- [ ] Define deployment target for hosted dev page.
 
 ### Phase 1 - 1u Keycap Geometry Prototype
 
@@ -145,6 +149,8 @@ Status: Planned.
 - FDM-first settings are the MVP source of truth until resin support is formally added.
 - The app should eventually include a visible 3D environment with easy mouse/keyboard inspection controls.
 - Dev builds should provide Blender-friendly geometry export for inspection and visual feedback.
+- Amanda's primary testing path should be a hosted dev/staging page, not local app setup.
+- Local setup remains documented for developer fallback and direct source debugging.
 
 ## Open Questions
 
@@ -154,6 +160,7 @@ Status: Planned.
 - Minimum accepted legend stroke width for reliable 0.2 mm FDM output.
 - Preferred slicer validation target.
 - Preferred Blender inspection format after first geometry export tests.
+- Website deployment target and dev route for hosted KeyGen testing.
 
 ## Removals / Decisions Against
 
