@@ -2,6 +2,43 @@
 
 All notable KeyGen changes are tracked here by update instance.
 
+## KG-20260706-0004 - KeyGen Direct jsDelivr Embed Correction
+
+Date: 2026-07-06
+Timestamp: 2026-07-06 01:08 America/Los_Angeles
+Owner: Amanda Ivans / Knight Witch
+Change Type: Documentation correction
+
+### Summary
+
+Corrected the hosted test deployment model. KeyGen should use a simple Fourthwall tester-page snippet pointing directly to a built KeyGen script through jsDelivr.
+
+### Decisions Captured
+
+- The website/widget carousel system was only an example of the small-snippet pattern.
+- KeyGen should remain separate from website/widget infrastructure.
+- The Fourthwall tester page should load a built KeyGen file using the `cdn.jsdelivr.net/gh/Knight-Witch/KeyGen@...` pattern.
+- If browser-readable public access is required, use the KeyGen repo or a KeyGen-only public deploy repo.
+
+### Files Added or Updated
+
+- Updated `/DOCS/EMBED_DEPLOYMENT_SPEC.md`.
+- Updated `/DOCS/DEV_SETUP.md`.
+- Added `/HISTORY/2026-07-06_keygen_direct_jsdelivr_embed.md`.
+- Added `/DIFFS/KG-20260706-0004_keygen_direct_jsdelivr_embed.diff.md`.
+
+### Operational Note
+
+Temporary placeholder files were accidentally created and immediately removed from `main` during this correction. They have no final file diff.
+
+### Rollback Notes
+
+This update is documentation-only. Rollback can restore the updated docs to KG-20260706-0003 state and remove the KG-20260706-0004 history/diff files.
+
+### Backup Notes
+
+No backup was created because this is a documentation-only correction and no app source code exists yet.
+
 ## KG-20260706-0003 - Hosted Dev Workflow
 
 Date: 2026-07-06
