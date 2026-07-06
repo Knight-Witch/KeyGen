@@ -2,7 +2,7 @@
 
 Date: 2026-07-06
 Timestamp: 2026-07-06 01:28 America/Los_Angeles
-Branch: kg-20260706-0005-real-scaffold
+Branch: kg-20260706-0005-app
 Change Type: App scaffold and direct embed prototype
 
 ## Summary
