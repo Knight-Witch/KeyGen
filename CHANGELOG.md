@@ -7,7 +7,7 @@ All notable KeyGen changes are tracked here by update instance.
 Date: 2026-07-06
 Timestamp: 2026-07-06 01:28 America/Los_Angeles
 Owner: Amanda Ivans / Knight Witch
-Branch: kg-20260706-0005-real-scaffold
+Branch: kg-20260706-0005-app
 Change Type: App scaffold and direct embed prototype
 
 ### Summary
