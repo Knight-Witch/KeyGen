@@ -15,6 +15,7 @@ Corrected the hosted test deployment direction. KeyGen should use a direct jsDel
 
 ## Files Updated
 
+- MASTER.md
 - DOCS/EMBED_DEPLOYMENT_SPEC.md
 - DOCS/DEV_SETUP.md
 - CHANGELOG.md
