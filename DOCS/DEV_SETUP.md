@@ -1,7 +1,7 @@
 # Dev Setup
 
-Update ID: KG-20260706-0003
-Last Updated: 2026-07-06 00:55 America/Los_Angeles
+Update ID: KG-20260706-0004
+Last Updated: 2026-07-06 01:08 America/Los_Angeles
 Owner: Amanda Ivans / Knight Witch
 
 ## Current State
@@ -10,49 +10,64 @@ The repository currently contains documentation only. There is no runnable app u
 
 ## Primary Testing Workflow
 
-Amanda's preferred workflow is a hosted dev/staging page, not a local developer setup.
+Amanda's preferred workflow is a hosted Fourthwall tester page, not a local developer setup.
 
-Because the website is hosted through Fourthwall, the preferred model is an embeddable app bundle:
+The KeyGen testing workflow should be a direct embed from the KeyGen repository:
 
-1. Code updates are made in GitHub.
-2. The KeyGen app is built into static JavaScript/CSS assets.
-3. The built assets are published to the existing website/widget static host or repo.
-4. Amanda creates or opens an unlisted Fourthwall tester page.
-5. Amanda pastes a small HTML snippet into the Fourthwall HTML/embed box.
-6. The snippet loads the real KeyGen bundle from the external static asset location.
-7. Amanda tests the UI, viewport, key generation, and exports in the browser.
-8. Amanda downloads generated files for Blender or slicer inspection.
-9. Feedback is sent back as notes, screenshots, Blender edits, or print-test results.
+1. Code updates are made in the KeyGen GitHub repo.
+2. The KeyGen app is built into static JavaScript/CSS assets inside the KeyGen project path.
+3. Amanda creates or opens an unlisted Fourthwall tester page.
+4. Amanda pastes a small HTML snippet into the Fourthwall HTML/embed box.
+5. The snippet loads the KeyGen bundle using a `cdn.jsdelivr.net/gh/Knight-Witch/KeyGen@...` URL.
+6. Amanda tests the UI, viewport, key generation, and exports in the browser.
+7. Amanda downloads generated files for Blender or slicer inspection.
+8. Feedback is sent back as notes, screenshots, Blender edits, or print-test results.
 
-This matches the existing project workflow pattern where GitHub updates are handled centrally and Amanda tests the result through an accessible web page.
+## Explicit Non-Goal
+
+KeyGen must not be published through `Knight-Witch/kw-site-widgets`.
+
+KeyGen must not modify Knight Witch website code, the website global footer loader, storefront product carousel code, or any unrelated website/widget architecture.
+
+The Fourthwall carousel/widget system is only a reference for the embed pattern. It is not the deployment target.
 
 ## Hosted Dev Page Goal
 
-The app should eventually be available through a Fourthwall unlisted tester page using a small embed snippet.
+The app should eventually be available through a Fourthwall unlisted tester page using a small direct embed snippet.
 
 Potential route/page examples:
 
 ```text
-/dev/keygen
 /keygen-dev
-/tools/keygen-dev
+/keygen-test
+/tools/keygen-test
 ```
 
-The final route depends on the website deployment environment.
+The final route depends on the Fourthwall page setup.
 
 Access should be hidden or restricted if possible. The dev page is for testing and should not be treated as the public product page.
 
 ## Fourthwall Embed Goal
 
-The Fourthwall page should only need a small snippet with a root container and a script tag that loads the KeyGen app bundle from the static asset host.
+The Fourthwall page should only need a small snippet with a root container and a script tag that loads the KeyGen app bundle from jsDelivr.
 
-Exact URLs are TBD.
+Conceptual snippet:
+
+```html
+<div id="keygen-app" data-keygen-mode="dev"></div>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/gh/Knight-Witch/KeyGen@COMMIT_OR_VERSION/dist/keygen-app.js?v=VERSION_LABEL">
+</script>
+```
+
+Exact file paths are TBD.
 
 The app bundle must be designed to mount into a container rather than assuming it controls the full page.
 
 ## Local Developer Workflow
 
-Local setup remains useful for code contributors or emergency debugging, but it is not Amanda's required testing path.
+Local setup remains useful for direct debugging, but it is not Amanda's required testing path.
 
 Future local workflow:
 
@@ -73,13 +88,13 @@ http://localhost:5173
 
 For Amanda's testing workflow:
 
-- Browser for the hosted dev page.
+- Browser for the hosted tester page.
 - Blender for geometry inspection.
 - Bambu Studio or target slicer for print validation.
 
 For developer/local source work:
 
-- GitHub Desktop or Git CLI.
+- Git CLI or GitHub Desktop.
 - VS Code or preferred code editor.
 - Node.js LTS.
 - npm initially, unless the project later standardizes on pnpm.
@@ -130,4 +145,4 @@ Minimum useful fixture:
 
 ## Notes
 
-This document should be updated when the app scaffold is added, the deployment path is known, the exact website/widget hosting repo is identified, and the exact Fourthwall tester page route is selected.
+This document should be updated when the app scaffold is added, the build output path is known, and the exact Fourthwall tester page route is selected.
