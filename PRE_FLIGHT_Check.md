@@ -2,6 +2,33 @@
 
 Rolling pre-flight review log for KeyGen.
 
+## KG-20260706-0002 - UI Viewport and Dev Setup Docs
+
+Date: 2026-07-06
+Timestamp: 2026-07-06 00:38 America/Los_Angeles
+Branch: kg-20260706-0002-dev-ui-docs
+Scope: Documentation update for viewport behavior, Blender inspection workflow, and local development setup.
+
+### Review
+
+Existing project documents were reviewed before this update.
+
+### Findings
+
+- `MASTER.md` already tracks Phase 2 browser preview and editing UI.
+- `DOCS/EXPORT_SPEC.md` already requires aligned 3MF and grouped STL exports.
+- No app source code exists yet.
+- No code modules, build scripts, package files, or UI components exist to conflict with.
+- This update is documentation-only and does not require a repository backup.
+
+### Recommendation
+
+Proceed with documentation update. Add explicit requirements for 3D viewport controls, canvas input behavior, Blender inspection exports, and local dev setup.
+
+### Action Taken
+
+Added and updated documentation to capture the new UI/dev workflow requirements.
+
 ## KG-20260706-0001 - Initial Project Scaffold
 
 Date: 2026-07-06
@@ -15,7 +42,7 @@ The repository was checked before scaffold work began.
 
 ### Findings
 
-- `Knight-Witch/KeyGen` exists and is private.
+- Repository exists and is private.
 - Repository access is available.
 - Default branch is `main`.
 - The repository had no app code.
