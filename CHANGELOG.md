@@ -2,6 +2,43 @@
 
 All notable KeyGen changes are tracked here by update instance.
 
+## KG-20260706-0003 - Hosted Dev Workflow
+
+Date: 2026-07-06
+Timestamp: 2026-07-06 00:50 America/Los_Angeles
+Owner: Amanda Ivans / Knight Witch
+Branch: kg-20260706-0003-hosted-dev-workflow
+Change Type: Documentation update
+
+### Summary
+
+Updated the project workflow so Amanda's primary testing path is a hosted dev/staging page rather than a local development setup.
+
+### Decisions Captured
+
+- Hosted dev/staging testing is the preferred workflow.
+- Local setup remains documented only as a fallback/developer workflow.
+- Amanda should not need to clone/run the app locally just to test UI or generated output.
+- Future deployment should provide a hidden or restricted dev route for browser testing.
+- Generated files should remain downloadable from the hosted dev build for Blender and slicer inspection.
+
+### Files Added or Updated
+
+- Updated `MASTER.md`.
+- Updated `CHANGELOG.md`.
+- Updated `PRE_FLIGHT_Check.md`.
+- Updated `/DOCS/DEV_SETUP.md`.
+- Added `/HISTORY/2026-07-06_hosted_dev_workflow.md`.
+- Added `/DIFFS/KG-20260706-0003_hosted_dev_workflow.diff.md`.
+
+### Rollback Notes
+
+This update is documentation-only. Rollback can remove the new history/diff records and restore updated tracking/setup files to KG-20260706-0002 state.
+
+### Backup Notes
+
+No backup was created because this is a documentation-only workflow update and no app source code exists yet.
+
 ## KG-20260706-0002 - UI Viewport and Dev Setup Docs
 
 Date: 2026-07-06
