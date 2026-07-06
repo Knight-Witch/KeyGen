@@ -2,8 +2,8 @@
 
 Project source bible for KeyGen. This file tracks product decisions, status, roadmap items, and removals.
 
-Update ID: KG-20260706-0004
-Last Updated: 2026-07-06 01:08 America/Los_Angeles
+Update ID: KG-20260706-0005
+Last Updated: 2026-07-06 01:28 America/Los_Angeles
 Owner: Amanda Ivans / Knight Witch
 
 ## Project Definition
@@ -78,11 +78,11 @@ Status: In progress.
 - [x] Define hosted dev page as primary testing workflow.
 - [x] Define Fourthwall embed deployment direction.
 - [x] Correct deployment boundary for direct KeyGen embed.
-- [ ] Create app scaffold.
-- [ ] Define package manager and scripts.
+- [x] Create app scaffold.
+- [x] Define package manager and scripts.
+- [x] Define KeyGen build output path.
+- [x] Create direct Fourthwall embed snippet.
 - [ ] Add linting/formatting rules.
-- [ ] Define KeyGen build output path.
-- [ ] Create direct Fourthwall embed snippet.
 
 ### Phase 1 - 1u Keycap Geometry Prototype
 
@@ -103,14 +103,14 @@ Status: Planned.
 
 ### Phase 2 - Browser Preview and Editing UI
 
-Status: Planned.
+Status: Started.
 
 - [ ] Build 3D preview viewport.
 - [ ] Add 360 degree orbit/rotate behavior.
 - [ ] Add zoom and pan behavior.
 - [ ] Add view reset behavior.
-- [ ] Add primary legend controls.
-- [ ] Add secondary legend controls.
+- [x] Add primary legend controls.
+- [x] Add secondary legend controls.
 - [ ] Add placement zones.
 - [ ] Add backlight preview mode.
 - [ ] Add exploded object inspection mode.
@@ -156,8 +156,9 @@ Status: Planned.
 - Amanda's primary testing path should be a hosted Fourthwall tester page, not local app setup.
 - Local setup remains documented for developer fallback and direct source debugging.
 - KeyGen should be built as an embeddable app bundle that can mount inside a Fourthwall HTML block.
-- KeyGen deployment should use the KeyGen project path through jsDelivr, or a KeyGen-only deploy repo if public bundle separation becomes necessary.
+- KeyGen deployment should use the KeyGen project path through jsDelivr.
 - Shared site infrastructure is outside the KeyGen deployment scope.
+- First app scaffold uses lean Vite + TypeScript without React to keep the first direct embed bundle small and easy to load.
 
 ## Open Questions
 
@@ -167,9 +168,6 @@ Status: Planned.
 - Minimum accepted legend stroke width for reliable 0.2 mm FDM output.
 - Preferred slicer validation target.
 - Preferred Blender inspection format after first geometry export tests.
-- Whether `Knight-Witch/KeyGen` should be public or use a KeyGen-only public deploy repo for built browser assets.
-- Final built file path, likely under `/dist/` or `/embed/`.
-- Final Fourthwall embed snippet path.
 
 ## Removals / Decisions Against
 
