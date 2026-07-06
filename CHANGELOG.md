@@ -44,8 +44,8 @@ Created the initial project tracking and specification foundation for KeyGen, a 
 - Added `/DOCS/LANGUAGE_TEXT_SPEC.md`.
 - Added `/DOCS/PRINTING_SPEC.md`.
 - Added `/DIFFS/KG-20260706-0001_initial_scaffold.diff.md`.
-- Added `/ASSETS/.gitkeep`.
-- Added `/BACKUP_VAULT/.gitkeep`.
+- Added `/ASSETS/README.md`.
+- Added `/BACKUP_VAULT/README.md`.
 
 ### Rollback Notes
 
