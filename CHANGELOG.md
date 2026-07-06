@@ -2,6 +2,46 @@
 
 All notable KeyGen changes are tracked here by update instance.
 
+## KG-20260706-0002 - UI Viewport and Dev Setup Docs
+
+Date: 2026-07-06
+Timestamp: 2026-07-06 00:38 America/Los_Angeles
+Owner: Amanda Ivans / Knight Witch
+Branch: kg-20260706-0002-dev-ui-docs
+Change Type: Documentation update
+
+### Summary
+
+Added project requirements for the future 3D canvas/viewport, local development setup, and Blender-friendly geometry inspection exports.
+
+### Decisions Captured
+
+- The app should eventually include an interactive 3D environment.
+- Users should be able to rotate/orbit the keycap 360 degrees, zoom, pan, and reset view.
+- Keyboard shortcuts may exist for convenience but must not be required for basic use.
+- Dev builds should support Blender-friendly geometry inspection export.
+- GLB/glTF or OBJ should be considered for Blender inspection, with STL retained for slicer parity.
+- Local dev workflow should support browser access through a dev server after app scaffolding exists.
+
+### Files Added or Updated
+
+- Updated `MASTER.md`.
+- Updated `CHANGELOG.md`.
+- Updated `PRE_FLIGHT_Check.md`.
+- Updated `/DOCS/EXPORT_SPEC.md`.
+- Added `/DOCS/UI_VIEWPORT_SPEC.md`.
+- Added `/DOCS/DEV_SETUP.md`.
+- Added `/HISTORY/2026-07-06_ui_viewport_and_dev_setup.md`.
+- Added `/DIFFS/KG-20260706-0002_ui_viewport_dev_setup.diff.md`.
+
+### Rollback Notes
+
+This update is documentation-only. Rollback can remove the two new spec files, remove the new history/diff records, and restore the updated tracking files to KG-20260706-0001 state.
+
+### Backup Notes
+
+No backup was created because this is a documentation-only update and no app architecture or source code exists yet.
+
 ## KG-20260706-0001 - Initial Project Scaffold
 
 Date: 2026-07-06
