@@ -2,6 +2,33 @@
 
 Rolling pre-flight review log for KeyGen.
 
+## KG-2026-07-06-0009 - Calibration STL Prototype
+
+Date: 2026-07-06
+Timestamp: 2026-07-06 02:42 America/Los_Angeles
+Branch: main
+Scope: First rough Redragon K580RGB 1u calibration STL generator and Fourthwall download button.
+
+### Review
+
+Existing history, MASTER, package setup, embed source, served bundle, and tester snippet were reviewed before this update.
+
+### Findings
+
+- Fourthwall embed loading has been validated.
+- No prior geometry generation modules existed.
+- The next roadmap item is Phase 1 geometry validation.
+- A rough calibration STL is the safest first physical test before final three-part legend/diffuser geometry.
+- This update is additive and does not require a repository backup.
+
+### Recommendation
+
+Add standalone STL utilities and a provisional Redragon K580RGB 1u calibration model. Enable a calibration STL download in the hosted tester page and defer final manufacturing geometry until import/print feedback is available.
+
+### Action Taken
+
+Added STL utilities, a calibration keycap model, calibration documentation, source UI wiring, the served browser bundle, and updated the tester snippet.
+
 ## KG-2026-07-06-0008 - Version Label Format
 
 Date: 2026-07-06
