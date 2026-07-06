@@ -2,8 +2,8 @@
 
 Project source bible for KeyGen. This file tracks product decisions, status, roadmap items, and removals.
 
-Update ID: KG-20260706-0007
-Last Updated: 2026-07-06 02:12 America/Los_Angeles
+Update ID: KG-2026-07-06-0009
+Last Updated: 2026-07-06 02:42 America/Los_Angeles
 Owner: Amanda Ivans / Knight Witch
 
 ## Project Definition
@@ -87,20 +87,22 @@ Status: Complete for initial embed proof-of-life.
 
 ### Phase 1 - 1u Keycap Geometry Prototype
 
-Status: Next.
+Status: Started.
 
 - [ ] Measure Redragon K580RGB 1u keycap dimensions.
 - [ ] Confirm switch/stem compatibility and tolerances.
-- [ ] Define initial shell profile.
+- [x] Define initial rough calibration shell profile.
+- [x] Generate rough calibration STL.
+- [x] Enable calibration STL download from Fourthwall tester page.
+- [ ] Validate import into Blender.
+- [ ] Validate import into slicer.
+- [ ] Print first FDM test.
 - [ ] Generate basic opaque shell.
 - [ ] Generate stem/diffuser part.
 - [ ] Generate primary legend plug.
 - [ ] Generate secondary legend plug integrated with diffuser.
 - [ ] Export pre-aligned STLs.
 - [ ] Export Blender/dev inspection file.
-- [ ] Validate import into Blender.
-- [ ] Validate import into slicer.
-- [ ] Print first FDM test.
 
 ### Phase 2 - Browser Preview and Editing UI
 
@@ -161,6 +163,7 @@ Status: Planned.
 - Shared site infrastructure is outside the KeyGen deployment scope.
 - First app scaffold uses lean Vite + TypeScript without React to keep the first direct embed bundle small and easy to load.
 - Fourthwall tester-page embed has been validated with the diagnostic bundle.
+- The first calibration STL is intentionally rough and exists to validate download, slicer import, scale, and switch fit before final geometry work.
 
 ## Open Questions
 
