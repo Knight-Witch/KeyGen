@@ -2,6 +2,32 @@
 
 Rolling pre-flight review log for KeyGen.
 
+## KG-20260706-0004 - Direct jsDelivr Embed Correction
+
+Date: 2026-07-06
+Timestamp: 2026-07-06 01:08 America/Los_Angeles
+Scope: Documentation correction for direct KeyGen jsDelivr embed deployment.
+
+### Review
+
+Existing project documents and history were reviewed before this correction.
+
+### Findings
+
+- Prior docs incorrectly implied that KeyGen could publish through shared website/widget infrastructure.
+- The intended workflow is a direct tester-page embed that points to the KeyGen project path through jsDelivr.
+- No application source code exists yet.
+- No deployment pipeline exists yet.
+- This update is documentation-only and does not require a repository backup.
+
+### Recommendation
+
+Correct the deployment docs so KeyGen remains separate and uses a direct jsDelivr embed from the KeyGen repo path, or a KeyGen-only deploy repo if public asset separation becomes necessary.
+
+### Action Taken
+
+Updated deployment/setup documentation and added a history/diff record for the correction.
+
 ## KG-20260706-0003 - Hosted Dev Workflow
 
 Date: 2026-07-06
