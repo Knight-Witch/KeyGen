@@ -2,6 +2,34 @@
 
 Rolling pre-flight review log for KeyGen.
 
+## KG-20260706-0003 - Hosted Dev Workflow
+
+Date: 2026-07-06
+Timestamp: 2026-07-06 00:50 America/Los_Angeles
+Branch: kg-20260706-0003-hosted-dev-workflow
+Scope: Documentation update defining hosted dev/staging page as Amanda's primary testing workflow.
+
+### Review
+
+Existing project documents and history were reviewed before this update.
+
+### Findings
+
+- `HISTORY/2026-07-06_ui_viewport_and_dev_setup.md` documents the prior local dev setup requirement.
+- `DOCS/DEV_SETUP.md` still framed local setup as the intended workflow.
+- No application source code exists yet.
+- No deployment pipeline exists yet.
+- No code modules or build scripts exist to conflict with.
+- This update is documentation-only and does not require a repository backup.
+
+### Recommendation
+
+Proceed with documentation update. Make hosted dev/staging testing the official primary workflow for Amanda, while preserving local setup as a developer fallback.
+
+### Action Taken
+
+Updated project tracking and setup docs to make hosted dev page testing the primary expected workflow.
+
 ## KG-20260706-0002 - UI Viewport and Dev Setup Docs
 
 Date: 2026-07-06
