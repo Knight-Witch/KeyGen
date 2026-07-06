@@ -6,7 +6,7 @@ Rolling pre-flight review log for KeyGen.
 
 Date: 2026-07-06
 Timestamp: 2026-07-06 01:28 America/Los_Angeles
-Branch: kg-20260706-0005-real-scaffold
+Branch: kg-20260706-0005-app
 Scope: First app scaffold and direct Fourthwall embed prototype.
 
 ### Review
@@ -70,7 +70,7 @@ Existing project documents and history were reviewed before this update.
 
 - No application source code exists yet.
 - No deployment pipeline exists yet.
-- No code modules, build scripts, package files, or UI components exist to conflict with.
+- No code modules or build scripts exist to conflict with.
 - This update is documentation-only and does not require a repository backup.
 
 ### Recommendation
