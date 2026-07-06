@@ -1,14 +1,14 @@
 # Fourthwall Tester Snippet
 
-Update ID: KG-2026-07-06-0008
-Last Updated: 2026-07-06 02:24 America/Los_Angeles
+Update ID: KG-2026-07-06-0009
+Last Updated: 2026-07-06 02:42 America/Los_Angeles
 Owner: Amanda Ivans / Knight Witch
 
 ## Purpose
 
 This is the small snippet intended for the unlisted Fourthwall tester page.
 
-## Diagnostic Test Snippet
+## Current Test Snippet
 
 Use this while actively testing the prototype:
 
@@ -21,7 +21,7 @@ Use this while actively testing the prototype:
 </div>
 <script
   defer
-  src="https://cdn.jsdelivr.net/gh/Knight-Witch/KeyGen@main/dist/keygen-app.js?v=KG-2026-07-06-0006-debug">
+  src="https://cdn.jsdelivr.net/gh/Knight-Witch/KeyGen@main/dist/keygen-app.js?v=KG-2026-07-06-0009-calibration">
 </script>
 ```
 
@@ -38,13 +38,14 @@ Use a commit-pinned URL when a specific tested build should not change unexpecte
 </div>
 <script
   defer
-  src="https://cdn.jsdelivr.net/gh/Knight-Witch/KeyGen@COMMIT_SHA/dist/keygen-app.js?v=KG-2026-07-06-0006-debug">
+  src="https://cdn.jsdelivr.net/gh/Knight-Witch/KeyGen@COMMIT_SHA/dist/keygen-app.js?v=KG-2026-07-06-0009-calibration">
 </script>
 ```
 
 ## Expected Outcomes
 
 - If the full KeyGen UI appears, the script loaded and mounted correctly.
+- If the UI shows `KG-2026-07-06-0009-calibration`, the current calibration build loaded.
 - If only the loading message appears, Fourthwall rendered the container but did not execute or could not load the external script.
 - If a red KeyGen error box appears, the script executed but could not mount correctly.
 - If nothing appears at all, the Fourthwall block itself is not rendering the HTML snippet.
@@ -52,6 +53,6 @@ Use a commit-pinned URL when a specific tested build should not change unexpecte
 ## Notes
 
 - The script auto-mounts into `#keygen-app`.
-- The first prototype renders a UI shell and keycap preview only.
-- STL and 3MF export buttons are disabled until the geometry core is added.
-- The dev JSON export is active and is intended to verify download behavior from the embedded page.
+- The calibration STL export is active.
+- The first calibration STL is a rough physical fit-test model, not the final three-part legend/diffuser geometry.
+- 3MF export remains disabled until the geometry core is more complete.
