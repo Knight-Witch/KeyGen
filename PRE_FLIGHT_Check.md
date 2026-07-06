@@ -2,6 +2,32 @@
 
 Rolling pre-flight review log for KeyGen.
 
+## KG-20260706-0006 - Embed Diagnostics
+
+Date: 2026-07-06
+Timestamp: 2026-07-06 02:05 America/Los_Angeles
+Branch: kg-20260706-0006-embed-debug
+Scope: Diagnostic patch for Fourthwall embed loading failure.
+
+### Review
+
+The first Fourthwall test showed no visible output. Existing embed docs and the committed browser bundle were reviewed.
+
+### Findings
+
+- The original tester snippet used an empty `#keygen-app` container, so any script load failure appeared as a blank page.
+- The original bundle had console warnings but no visible on-page diagnostics.
+- The served browser file is `/dist/keygen-app.js`.
+- This update is a small diagnostic patch and does not require a repository backup.
+
+### Recommendation
+
+Add visible fallback content to the snippet and visible diagnostics to the served browser bundle before continuing geometry work.
+
+### Action Taken
+
+Updated the browser bundle and tester snippet documentation with visible loading, mount, and error diagnostics.
+
 ## KG-20260706-0005 - Embeddable App Scaffold
 
 Date: 2026-07-06
