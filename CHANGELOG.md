@@ -5,22 +5,22 @@ All notable KeyGen changes are tracked here by update instance.
 ## KG-20260706-0003 - Hosted Dev Workflow
 
 Date: 2026-07-06
-Timestamp: 2026-07-06 00:50 America/Los_Angeles
+Timestamp: 2026-07-06 00:55 America/Los_Angeles
 Owner: Amanda Ivans / Knight Witch
 Branch: kg-20260706-0003-hosted-dev-workflow
 Change Type: Documentation update
 
 ### Summary
 
-Updated the project workflow so Amanda's primary testing path is a hosted dev/staging page rather than a local development setup.
+Updated the project workflow so Amanda's primary testing path is a hosted Fourthwall dev/staging page using a small embed snippet rather than local setup.
 
 ### Decisions Captured
 
 - Hosted dev/staging testing is the preferred workflow.
-- Local setup remains documented only as a fallback/developer workflow.
-- Amanda should not need to clone/run the app locally just to test UI or generated output.
+- Local setup remains fallback/developer workflow only.
 - Future deployment should provide a hidden or restricted dev route for browser testing.
 - Generated files should remain downloadable from the hosted dev build for Blender and slicer inspection.
+- KeyGen should be built as an embeddable static app bundle that can mount into a Fourthwall HTML/embed block.
 
 ### Files Added or Updated
 
@@ -28,12 +28,13 @@ Updated the project workflow so Amanda's primary testing path is a hosted dev/st
 - Updated `CHANGELOG.md`.
 - Updated `PRE_FLIGHT_Check.md`.
 - Updated `/DOCS/DEV_SETUP.md`.
+- Added `/DOCS/EMBED_DEPLOYMENT_SPEC.md`.
 - Added `/HISTORY/2026-07-06_hosted_dev_workflow.md`.
 - Added `/DIFFS/KG-20260706-0003_hosted_dev_workflow.diff.md`.
 
 ### Rollback Notes
 
-This update is documentation-only. Rollback can remove the new history/diff records and restore updated tracking/setup files to KG-20260706-0002 state.
+This update is documentation-only. Rollback can remove the new history/diff/spec records and restore updated tracking/setup files to KG-20260706-0002 state.
 
 ### Backup Notes
 
