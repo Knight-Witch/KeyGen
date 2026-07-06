@@ -3,7 +3,7 @@ import type { KeycapSpec } from '../core/keycap/types';
 import { validateKeycapSpec } from '../core/keycap/validation';
 import { KEYGEN_STYLES } from './styles';
 
-const APP_VERSION = 'KG.2026.07.06.0008.dev';
+const APP_VERSION = 'KG-2026-07-06-0006-debug';
 const STYLE_ID = 'kwkg-styles';
 const ROOT_SELECTOR = '#keygen-app';
 
