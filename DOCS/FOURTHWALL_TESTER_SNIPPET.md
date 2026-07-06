@@ -1,7 +1,7 @@
 # Fourthwall Tester Snippet
 
-Update ID: KG-20260706-0006
-Last Updated: 2026-07-06 02:05 America/Los_Angeles
+Update ID: KG.2026.07.06.0008
+Last Updated: 2026-07-06 02:20 America/Los_Angeles
 Owner: Amanda Ivans / Knight Witch
 
 ## Purpose
@@ -21,7 +21,7 @@ Use this while actively testing the prototype:
 </div>
 <script
   defer
-  src="https://cdn.jsdelivr.net/gh/Knight-Witch/KeyGen@main/dist/keygen-app.js?v=KG-20260706-0006-debug">
+  src="https://cdn.jsdelivr.net/gh/Knight-Witch/KeyGen@main/dist/keygen-app.js?v=KG.2026.07.06.0008.dev">
 </script>
 ```
 
@@ -38,7 +38,7 @@ Use a commit-pinned URL when a specific tested build should not change unexpecte
 </div>
 <script
   defer
-  src="https://cdn.jsdelivr.net/gh/Knight-Witch/KeyGen@COMMIT_SHA/dist/keygen-app.js?v=KG-20260706-0006-debug">
+  src="https://cdn.jsdelivr.net/gh/Knight-Witch/KeyGen@COMMIT_SHA/dist/keygen-app.js?v=KG.2026.07.06.0008.dev">
 </script>
 ```
 
