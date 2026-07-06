@@ -2,8 +2,8 @@
 
 Project source bible for KeyGen. This file tracks product decisions, status, roadmap items, and removals.
 
-Update ID: KG-20260706-0001
-Last Updated: 2026-07-06 00:23 America/Los_Angeles
+Update ID: KG-20260706-0002
+Last Updated: 2026-07-06 00:38 America/Los_Angeles
 Owner: Amanda Ivans / Knight Witch
 
 ## Project Definition
@@ -34,6 +34,7 @@ Users should be able to choose a keycap target, configure primary and secondary 
 - HarfBuzz-compatible shaping path for multilingual expansion.
 - Preferred export: pre-aligned 3MF.
 - Compatibility export: grouped STLs.
+- Dev inspection export: Blender-friendly GLB/glTF or OBJ where useful.
 
 ## Approved MVP Geometry Model
 
@@ -68,6 +69,9 @@ Status: In progress.
 - [x] Create STYLE_KEYS.
 - [x] Create HISTORY seed note.
 - [x] Create initial technical specs.
+- [x] Add local dev setup documentation.
+- [x] Add UI viewport specification.
+- [x] Add Blender/dev inspection export requirement.
 - [ ] Create app scaffold.
 - [ ] Define package manager and scripts.
 - [ ] Add linting/formatting rules.
@@ -84,6 +88,8 @@ Status: Planned.
 - [ ] Generate primary legend plug.
 - [ ] Generate secondary legend plug integrated with diffuser.
 - [ ] Export pre-aligned STLs.
+- [ ] Export Blender/dev inspection file.
+- [ ] Validate import into Blender.
 - [ ] Validate import into slicer.
 - [ ] Print first FDM test.
 
@@ -92,10 +98,14 @@ Status: Planned.
 Status: Planned.
 
 - [ ] Build 3D preview viewport.
+- [ ] Add 360 degree orbit/rotate behavior.
+- [ ] Add zoom and pan behavior.
+- [ ] Add view reset behavior.
 - [ ] Add primary legend controls.
 - [ ] Add secondary legend controls.
 - [ ] Add placement zones.
 - [ ] Add backlight preview mode.
+- [ ] Add exploded object inspection mode.
 - [ ] Add printability validator.
 
 ### Phase 3 - 3MF Export
@@ -133,6 +143,8 @@ Status: Planned.
 - User-facing UX must prioritize simple configuration over freeform CAD editing.
 - All generated print parts must remain slicer-aligned by default.
 - FDM-first settings are the MVP source of truth until resin support is formally added.
+- The app should eventually include a visible 3D environment with easy mouse/keyboard inspection controls.
+- Dev builds should provide Blender-friendly geometry export for inspection and visual feedback.
 
 ## Open Questions
 
@@ -141,6 +153,7 @@ Status: Planned.
 - Final default font for Latin/Cyrillic legends.
 - Minimum accepted legend stroke width for reliable 0.2 mm FDM output.
 - Preferred slicer validation target.
+- Preferred Blender inspection format after first geometry export tests.
 
 ## Removals / Decisions Against
 
@@ -148,4 +161,4 @@ No removals recorded yet.
 
 ## Notes
 
-Major refactors or architecture rewrites require a segregated backup in `/BACKUP_VAULT/` using the naming convention `REPO_BACKUP_mm-dd-yy_timestamp`. No backup is required for this initial documentation scaffold because the repo has no existing app code and this is not a destructive change.
+Major refactors or architecture rewrites require a segregated backup in `/BACKUP_VAULT/` using the naming convention `REPO_BACKUP_mm-dd-yy_timestamp`. No backup is required for documentation-only updates that do not alter existing app architecture.
