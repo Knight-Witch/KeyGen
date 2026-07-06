@@ -22,8 +22,11 @@ Corrected the hosted test deployment model. KeyGen should use a simple Fourthwal
 
 ### Files Added or Updated
 
+- Updated `MASTER.md`.
 - Updated `/DOCS/EMBED_DEPLOYMENT_SPEC.md`.
 - Updated `/DOCS/DEV_SETUP.md`.
+- Updated `CHANGELOG.md`.
+- Updated `PRE_FLIGHT_Check.md`.
 - Added `/HISTORY/2026-07-06_keygen_direct_jsdelivr_embed.md`.
 - Added `/DIFFS/KG-20260706-0004_keygen_direct_jsdelivr_embed.diff.md`.
 
