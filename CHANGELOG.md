@@ -2,6 +2,38 @@
 
 All notable KeyGen changes are tracked here by update instance.
 
+## KG-20260706-0006 - Embed Diagnostics
+
+Date: 2026-07-06
+Timestamp: 2026-07-06 02:05 America/Los_Angeles
+Owner: Amanda Ivans / Knight Witch
+Branch: kg-20260706-0006-embed-debug
+Change Type: Embed diagnostic patch
+
+### Summary
+
+Added visible diagnostics to the Fourthwall embed path after the first tester page showed no visible output.
+
+### Decisions Captured
+
+- The tester snippet should include visible fallback content inside `#keygen-app` so script load failures are no longer blank.
+- The browser bundle should display `KG-20260706-0006-debug` after successful mount.
+- The browser bundle should inject a visible error box if the script executes but cannot find the mount container.
+
+### Files Added or Updated
+
+- Updated `/dist/keygen-app.js`.
+- Updated `/DOCS/FOURTHWALL_TESTER_SNIPPET.md`.
+- Updated `CHANGELOG.md`.
+
+### Rollback Notes
+
+Rollback can restore `/dist/keygen-app.js`, `/DOCS/FOURTHWALL_TESTER_SNIPPET.md`, and `CHANGELOG.md` to KG-20260706-0005 state.
+
+### Backup Notes
+
+No backup was created because this is a small diagnostic patch, not a destructive refactor.
+
 ## KG-20260706-0005 - Embeddable App Scaffold
 
 Date: 2026-07-06
