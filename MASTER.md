@@ -3,7 +3,7 @@
 Project source bible for KeyGen. This file tracks product decisions, status, roadmap items, and removals.
 
 Update ID: KG-20260706-0003
-Last Updated: 2026-07-06 00:50 America/Los_Angeles
+Last Updated: 2026-07-06 00:55 America/Los_Angeles
 Owner: Amanda Ivans / Knight Witch
 
 ## Project Definition
@@ -35,7 +35,8 @@ Users should be able to choose a keycap target, configure primary and secondary 
 - Preferred export: pre-aligned 3MF.
 - Compatibility export: grouped STLs.
 - Dev inspection export: Blender-friendly GLB/glTF or OBJ where useful.
-- Primary testing workflow: hosted dev/staging page.
+- Primary testing workflow: hosted Fourthwall dev/staging page.
+- Deployment shape: embeddable static JS/CSS bundle loaded through a small Fourthwall HTML snippet.
 - Local development workflow: fallback/developer-only path, not Amanda's required test path.
 
 ## Approved MVP Geometry Model
@@ -75,10 +76,13 @@ Status: In progress.
 - [x] Add UI viewport specification.
 - [x] Add Blender/dev inspection export requirement.
 - [x] Define hosted dev page as primary testing workflow.
+- [x] Define Fourthwall embed deployment direction.
 - [ ] Create app scaffold.
 - [ ] Define package manager and scripts.
 - [ ] Add linting/formatting rules.
+- [ ] Identify website/widget hosting repo.
 - [ ] Define deployment target for hosted dev page.
+- [ ] Create Fourthwall embed snippet.
 
 ### Phase 1 - 1u Keycap Geometry Prototype
 
@@ -149,8 +153,10 @@ Status: Planned.
 - FDM-first settings are the MVP source of truth until resin support is formally added.
 - The app should eventually include a visible 3D environment with easy mouse/keyboard inspection controls.
 - Dev builds should provide Blender-friendly geometry export for inspection and visual feedback.
-- Amanda's primary testing path should be a hosted dev/staging page, not local app setup.
+- Amanda's primary testing path should be a hosted Fourthwall dev/staging page, not local app setup.
 - Local setup remains documented for developer fallback and direct source debugging.
+- KeyGen should be built as an embeddable app bundle that can mount inside a Fourthwall HTML block.
+- The source repo can remain private, but built JS/CSS assets must be published to a static asset location for Fourthwall embeds.
 
 ## Open Questions
 
@@ -160,7 +166,9 @@ Status: Planned.
 - Minimum accepted legend stroke width for reliable 0.2 mm FDM output.
 - Preferred slicer validation target.
 - Preferred Blender inspection format after first geometry export tests.
+- Website/widget hosting repo name.
 - Website deployment target and dev route for hosted KeyGen testing.
+- Final Fourthwall embed snippet path.
 
 ## Removals / Decisions Against
 
