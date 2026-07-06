@@ -1,18 +1,47 @@
 # Dev Setup
 
-Update ID: KG-20260706-0002
-Last Updated: 2026-07-06 00:38 America/Los_Angeles
+Update ID: KG-20260706-0003
+Last Updated: 2026-07-06 00:50 America/Los_Angeles
 Owner: Amanda Ivans / Knight Witch
 
 ## Current State
 
 The repository currently contains documentation only. There is no runnable app until the app scaffold is added.
 
-After the app scaffold exists, the local workflow should let Amanda clone the repo, install dependencies, run a local dev server, view the app in a browser, and export geometry for slicer or Blender inspection.
+## Primary Testing Workflow
 
-## Intended Local Workflow
+Amanda's preferred workflow is a hosted dev/staging page, not a local developer setup.
 
-Expected future workflow:
+The intended project workflow is:
+
+1. Code updates are made in GitHub.
+2. The app build is deployed to a private or hidden dev page.
+3. Amanda opens the dev page in a browser.
+4. Amanda tests the UI, viewport, key generation, and exports.
+5. Amanda downloads generated files for Blender or slicer inspection.
+6. Feedback is sent back as notes, screenshots, Blender edits, or print-test results.
+
+This matches the existing project workflow pattern where GitHub updates are handled centrally and Amanda tests the result through an accessible web page.
+
+## Hosted Dev Page Goal
+
+The app should eventually be available at a private or hidden staging URL such as:
+
+```text
+/dev/keygen
+/keygen-dev
+/tools/keygen-dev
+```
+
+The final route depends on the website deployment environment.
+
+Access should be hidden or restricted if possible. The dev page is for testing and should not be treated as the public product page.
+
+## Local Developer Workflow
+
+Local setup remains useful for code contributors or emergency debugging, but it is not Amanda's required testing path.
+
+Future local workflow:
 
 ```bash
 git clone https://github.com/Knight-Witch/KeyGen.git
@@ -29,12 +58,18 @@ http://localhost:5173
 
 ## Recommended Local Tools
 
+For Amanda's testing workflow:
+
+- Browser for the hosted dev page.
+- Blender for geometry inspection.
+- Bambu Studio or target slicer for print validation.
+
+For developer/local source work:
+
 - GitHub Desktop or Git CLI.
 - VS Code or preferred code editor.
 - Node.js LTS.
 - npm initially, unless the project later standardizes on pnpm.
-- Blender for geometry inspection.
-- Bambu Studio or target slicer for print validation.
 
 ## Planned Scripts
 
@@ -54,14 +89,16 @@ When the app scaffold is created, define scripts similar to:
 
 ## Development Access Goal
 
-Local testing should support:
+Hosted dev testing should support:
 
 - Browser UI access.
-- Live reload while code changes.
 - 3D viewport testing.
 - Geometry generation test buttons.
 - Export buttons for STL, 3MF, and dev inspection formats.
 - Clear test fixtures for Redragon K580RGB 1u keys.
+- Downloadable exports for Blender and slicer inspection.
+
+Local development should support the same features plus live reload while source code changes.
 
 ## Dev Fixture Goal
 
@@ -80,4 +117,4 @@ Minimum useful fixture:
 
 ## Notes
 
-This document should be updated when the app scaffold is added and the exact package manager, install command, and dev scripts are finalized.
+This document should be updated when the app scaffold is added, the deployment path is known, and the exact website dev route is selected.
